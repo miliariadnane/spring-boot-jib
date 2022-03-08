@@ -1,6 +1,6 @@
-Containerize Spring Boot app with JIB - Demo.
+## Containerize Spring Boot app with JIB - Demo.
 
-Steps :
+### Steps :
 
 1. Add jib-maven-plugin to build part in "pom.xml" :
 
@@ -19,11 +19,11 @@ Steps :
 
 3. Run maven build
 
-3.1. Maven command to push image locally
+  * Maven command to push image locally
 
 > mvnw clean install jib:dockerBuild -Djib.to.image=springboot-jib:v1
 
-3.1. Maven command to push image to the registry
+  * Maven command to push image to the registry
 
 > mvnw clean install jib:build -Djib.to.image=miliariadnane/springboot-jib:v1 -Djib.to.auth.username=your_username -Djib.to.auth.password=your_password
 
@@ -33,5 +33,6 @@ Steps :
 
 5. APIs for testing :
 
-> 1st: https://localhost:8080/api/v1/customers/all
+> 1st: https://localhost:8080/api/v1/customers/all 
+<br/>
 > 2nd: https://localhost:8080/api/v1/customers/maleCustomers
